@@ -26,7 +26,7 @@ app.use(cookieParser());
 //koi bhi request frontend se aarhi hai use entertain karne ke liye ye niche wala line
 app.use(
     cors({
-        origin:"http://localhost:3000",
+        origin:"https://studynotion-omega.vercel.app",
         credentials:true,
     })
 );
