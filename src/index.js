@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   // Browser is in dark mode, update favicon to dark mode
-  document.getElementById('favicon').href = '/favicon.ico';
+  document.getElementById('favicon').href = '/faviconLight.ico';
 }
 
 const store = configureStore({
