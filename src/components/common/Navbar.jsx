@@ -69,7 +69,7 @@ const Navbar = () => {
                                             <p>{link.title}</p>
                                             <BsChevronDown />
 
-                                            <div className={`z-[1000] invisible absolute left-[50%] translate-x-[-50%] translate-y-[3em] group-hover:translate-y-[1.65em] top-[50%] grid grid-flow-col grid-rows-3 rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 lg:w-max w-max text-center`}>
+                                            <div className={`z-[1000] invisible absolute left-[50%] translate-x-[-50%] translate-y-[3em] group-hover:translate-y-[1.65em] top-[50%] grid grid-flow-col grid-rows-3 rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 min-w-[250px] lg:w-max w-max text-center`}>
 
                                                 <div className='absolute left-[50%] -z-10 translate-y-[-40%] translate-x-[80%] top-0 h-6 w-6 rotate-45 select-none rounded bg-richblack-5'></div>
 

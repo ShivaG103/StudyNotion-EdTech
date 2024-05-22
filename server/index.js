@@ -5,6 +5,7 @@ const userRoutes = require('./routes/User');
 const profileRoutes = require('./routes/Profile');
 const paymentRoutes = require('./routes/Payments');
 const courseRoutes = require('./routes/Course');
+const contactRoute = require('./routes/Contact')
 
 const database = require('./config/database');
 const cookieParser = require('cookie-parser');
@@ -25,10 +26,11 @@ app.use(express.json());
 app.use(cookieParser());
 //koi bhi request frontend se aarhi hai use entertain karne ke liye ye niche wala line
 app.use(
-    cors({
-        origin:"https://studynotion-omega.vercel.app",
-        credentials:true,
-    })
+  cors({
+    origin: "https://studynotion-omega.vercel.app",
+    // origin: "http://localhost:3000",
+    credentials: true,
+  })
 );
 
 app.use(
@@ -46,6 +48,7 @@ app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
+app.use("/api/v1/reach", contactRoute);
 
 //def route
 

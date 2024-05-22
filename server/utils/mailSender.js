@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-const mailSender = async (email, title, body) =>{
+const mailSender = async (email, title, body, cc) =>{
     try {
         let transporter = nodemailer.createTransport({
             host:process.env.MAIL_HOST,
@@ -12,9 +12,10 @@ const mailSender = async (email, title, body) =>{
         });
 
         let info = await transporter.sendMail({
-            from: 'StudyNotion || EdTech - by Shivam',
+            from: 'StudyNotion || EdTech - by Shivam <studynotion404@gmail.com>',
             to:`${email}`,
             subject:`${title}`,
+            cc: cc ? `${cc}` : null,
             html:`${body}`,
         });
         console.log(info);

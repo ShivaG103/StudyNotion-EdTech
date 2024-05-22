@@ -7,14 +7,15 @@ exports.contactUsController = async (req, res) => {
   try {
     const emailRes = await mailSender(
       email,
-      "Your Data send successfully",
-      contactUsEmail(email, firstname, lastname, message, phoneNo, countrycode)
-    )
+      "Your Data sent successfully",
+      contactUsEmail(email, firstname, lastname, message, phoneNo, countrycode),
+      'studynotion404@gmail.com'
+    );
     console.log("Email Res ", emailRes)
     return res.json({
       success: true,
-      message: "Email send successfully",
-    })
+      message: "Email sent successfully",
+    });
   } catch (error) {
     console.log("Error", error)
     console.log("Error message :", error.message)
